@@ -1,8 +1,8 @@
 import pygame
-pagame.init()
+pygame.init()
 screen = pygame.display.set_mode([800,600])
 pygame.display.set_caption("Smiley Pong")
-keepGing=True
+keepGoing=True
 pic=pygame.image.load("CrazySmile.bmp")
 colorkey=pic.get_at((0,0))
 pic.set_colorkey(colorkey)
@@ -24,7 +24,7 @@ lives=5
 font=pygame.font.SysFont("Times",24)
 
 while keepGoing:
-    for event in pagame.event.get():
+    for event in pygame.event.get():
         if event.type==pygame.QUIT:
             keepGoing=False
     picx += speedx
